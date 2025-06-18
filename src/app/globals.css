@@ -1,26 +1,87 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --uberojo: #e3132d;
+    --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+    --color-ube-rojo: #e3132d;
+    --color-blanco-fondo: #F2F2F2;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@layer base {
+    @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        src: url('/fonts/Inter/Inter-Regular.otf') format('opentype');
+        /* opcional: font-display para mejorar FOUT */
+        font-display: swap;
+    }
+
+    /* Inter Light */
+    @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 300;
+        src: url('/fonts/Inter/Inter-Light.otf') format('opentype');
+        font-display: swap;
+    }
+
+    /* Inter SemiBold */
+    @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        src: url('/fonts/Inter/Inter-SemiBold.otf') format('opentype');
+        font-display: swap;
+    }
+
+    /* Inter Bold */
+    @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        src: url('/fonts/Inter/Inter-Bold.otf') format('opentype');
+        font-display: swap;
+    }
+
+    .inter-font{
+        font-family: "Inter";
+    }
+
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+
+    .login-wrapper {
+        @apply absolute top-1/2 transform -translate-y-1/2 space-y-6;
+
+        @apply md:right-8 md:left-auto md:translate-x-0;
+
+        @apply left-1/2 -translate-x-1/2;
+    }
+
+    .form-login {
+        font-family: "Inter";
+        @apply text-white;
+    }
+
+
+    .input-form {
+        @apply
+        w-full
+        px-3
+        py-2
+        border
+        border-gray-500
+        text-gray-500
+        rounded 
+        mt-1
+        mb-2
+        focus:text-gray-200
+        focus:outline-none;
+    }
+
 }
