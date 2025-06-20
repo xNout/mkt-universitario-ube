@@ -1,5 +1,10 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Instalación de dependencias
+
+Ejecuta `npm install` para instalar todas las librerías necesarias. Las versiones utilizadas se listan en `requirements.txt`.
+
+
 ## Getting Started
 
 First, run the development server:
